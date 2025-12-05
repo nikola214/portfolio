@@ -1,57 +1,6 @@
-.projects-list {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 2rem auto;
-    text-align: left;
-}
-
-.projects-list li {
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    border-left: 4px solid #f97316;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.projects-list li:hover {
-    transform: translateX(5px);
-    color: #f97316;
-}
-
-.projects-page-back {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.5rem 1rem;
-    background-color: #f97316;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.projects-page-back:hover {
-    background-color: #ea580c;
-    transform: scale(1.05);
-}
-
-.mypro {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #222;
-    margin-top: 3rem;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.projects-main {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

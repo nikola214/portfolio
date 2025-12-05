@@ -126,7 +126,7 @@ footer {
     border-radius: 50%;
     filter: blur(60px);
     opacity: 0.6;
-    animation: blobMove 12s infinite ease-in-out alternate;
+    animation: blobMove 12s infinite;
 }
 
 .blob1 {
