@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f9f9f9;
+    color: #111;
+    line-height: 1.6;
+}
+header{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+.helloheader {
+    font-size: 20vh;
+    font-weight: 700;
+    color:#222;
+    animation: slam 1s ease-out forwards;
+}
+@keyframes slam {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }   
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+main {
+    padding: 4rem 1.5rem;
+}
+section {
+    max-width: 900px;
+    margin: 4rem auto;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about{
+    background: rgba(255, 255, 255, 0.6);
+    padding: 2.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 80px 80px rgba(0, 0, 0, 0.05) ;
+}
+.about h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.about p{
+    margin-bottom: 1rem;;
+}
+.about ul{
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+.about li {
+    margin-bottom: 0.4rem;
+}
+.socials ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.socials a {
+    text-decoration: none;
+    color: #0366d6;
+    font-weight: 500;
+}
+.socials a:hover {
+    text-decoration: underline;
+}
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #888;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+.abstract-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    align-items: center;
+    min-height: 300px;
+}
+.abstract-wrapper.paused .blob {
+    animation-play-state: paused;
+}
+
+.abstract-wrapper .blob {
+    will-change: transform;
+}
+
+.blob {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    animation: blobMove 12s infinite ease-in-out alternate;
+}
+
+.blob1 {
+    background: #00c6c2;
+    top: -40px;
+    left: 10%;
+}
+
+.blob2 {
+    background: #ffbe0b;
+    top: 20px;
+    right: 20%;
+    animation-delay: 3s;
+}
+
+.blob3 {
+    background: #8b5cf6;
+    top: 180px;
+    left: 35%;
+    animation-delay: 6s;
+}
+
+@keyframes blobMove {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(40px, -30px) scale(1.15);
+    }
+    50% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+    75% {
+        transform: translate(30px, 40px) scale(1.1);
+    }
+    100% {
+        transform: translate(-30px, -20px) scale(1);
+    }
+}
+.btn-row {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.fancy-btn {
+    padding: 1rem 2rem;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.fancy-btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.7), transparent 60%);
+    transform: scale(0);
+    transition: transform 0.4s ease;
+}
+
+.fancy-btn:hover::before {
+    transform: scale(1);
+}
+
+.fancy-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(98, 22, 249, 0.25);
+}
+
+h1, h2, h3 {
+    letter-spacing: -0.02em;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    font-size: 1.05rem;
+    color: #333;
+}
